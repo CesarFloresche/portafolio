@@ -1,59 +1,48 @@
-# MiPortafolio
+# Portafolio personal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+Portafolio de una sola página recreado como una aplicación Angular. La interfaz está inspirada en la plantilla visual de referencia, pero la página se renderiza con componentes y estilos propios de Angular.
 
-## Development server
-
-To start a local development server, run:
+## Ejecutar el proyecto
 
 ```bash
-ng serve
+npm install
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Abre `http://localhost:4200/` en el navegador. Para compilar la versión de producción:
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ejecutar las pruebas:
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
+## Datos y contenido
 
-To build the project run:
+Los datos personales y el contenido editable están separados de la vista en `src/app/portfolio-content.ts`:
 
-```bash
-ng build
-```
+- `profile`: nombre, edad, carrera, universidad y semestre.
+- `skills`: habilidades que quieras mostrar.
+- `education` y `experience`: entradas para las columnas de trayectoria.
+- `projects`: título, categoría, descripción, imagen y enlace de cada proyecto.
+- `socialLinks`: enlaces a tus redes.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+El perfil incluye desarrollo backend, desarrollo frontend, IoT y experiencia de trabajo junto a tiendas locales. El acceso a proyectos enlaza al perfil de GitHub indicado. La estructura y los datos actuales están documentados en [PORTAFOLIO.md](./PORTAFOLIO.md).
 
-## Running unit tests
+## Diseño
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+El portafolio usa una paleta cyberpunk oscura con acentos rojos, tipografías Orbitron y Rajdhani, un fondo de portada con rejilla y aros decorativos de bajo contraste, tamaños de letra pensados para leerse en móvil y escritorio, animaciones de entrada al desplazarse, efecto de escritura en la portada y un glitch breve en intervalos aleatorios. El efecto respeta la preferencia de movimiento reducido del sistema. Consulta [PORTAFOLIO.md](./PORTAFOLIO.md) para ver la estructura y el contenido actual.
 
-```bash
-ng test
-```
+## Imágenes
 
-## Running end-to-end tests
+Las imágenes que usa la página están organizadas en `public/images/`:
 
-For end-to-end (e2e) testing, run:
+- `profile.jpeg`: foto de perfil.
+- `hero-background.jpg`: imagen panorámica de portada.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Los estilos y animaciones están en `src/app/app.scss`, y la estructura de la página en `src/app/app.html`. Las animaciones de entrada al desplazarse y el efecto de escritura están implementados en Angular sin depender de los scripts de la plantilla.
+"# portafolio" 
